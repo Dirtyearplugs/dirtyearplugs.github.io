@@ -1,3 +1,12 @@
+var data
+function toTitleCase(str) {
+    return str.replace(
+      /\w\S*/g,
+      function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      }
+    );
+  }
 
 
 function getData(){
@@ -10,8 +19,28 @@ function getData(){
         var db = new SQL.Database(uInt8Array);
         
         // Now you can run SQL queries on the db object.
-        var results = db.exec("SELECT * FROM eoitems");
-        console.log(results);
+        data = db.exec("SELECT * FROM eoitems");
+        console.log(data);
+    };
+
+xhr.send();
+}
+function getDataByName(name){
+    let title_name = toTitleCase(name)
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', './database.db', true);
+    xhr.responseType = 'arraybuffer';
+
+    xhr.onload = function(e) {
+        var uInt8Array = new Uint8Array(this.response);
+        var db = new SQL.Database(uInt8Array);
+        
+        // Now you can run SQL queries on the db object.
+        let query_string =  "SELECT * FROM eoitems"
+        let addition = " WHERE \"Name\" = '" + title_name + "'"
+        let query = query_string + addition
+        data = db.exec(query);
+        console.log(data);
     };
 
 xhr.send();
