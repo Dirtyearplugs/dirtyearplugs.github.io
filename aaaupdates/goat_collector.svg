@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.2" viewBox="107.87 247.496 27.256 90.776" width="5691" height="2865" xmlns="http://www.w3.org/2000/svg">
+  <title>New Project 2</title>
+  <style>
+		.s0 { fill: #673c00 } 
+		.s1 { fill: #613a00 } 
+		.s2 { fill: #000b59 } 
+		.s3 { fill: #b79261 } 
+		.s4 { fill: #686868 } 
+	</style>
+  <path id="Layer 5" class="s0" d="m134 323v13l-2 1-5 1-3-2-1-4-2-1h-11l-2-2v-2l2-1h3l1-2 1-3v-3h8v5z"/>
+  <path id="Layer 7" class="s1" d="m133 301v-5-4l2-2v-9-6l-2-2-2-3-2-2-1-2-6 6-3 2-3-1-2-1v3 17l-3 1v3l2 1 2 2 4-1 5 1z"/>
+  <path id="Layer 6" class="s2" d="m134 323v-9l-1-13-6-2-5-2-2-3-3 1-3 2v11c-0.2 1.5 1 9 1 9l3 4 5 3h7z"/>
+  <path id="Layer 9" class="s3" d="M 129 264 L 126 265 L 121 266 L 114 267 L 111 265 L 112 253 L 114 251 L 116.201 248.85 L 120.553 248 L 125.198 248.3 L 128 251 L 130 253 L 131 258 L 129 264 Z"/>
+  <path id="Layer 8" class="s4" d="M 130 266 L 128 268 L 124 270 L 122 274 L 118 275 L 115 273 L 112 270 L 112 268 L 110 264 L 113 264 L 116 262 L 118 263 L 120 265 L 124 265 L 124 263 L 129 262 L 130 264 L 130 266 Z M 125 257 L 129 256 L 131 255 L 128 250 L 128 254 L 126 256 L 125 257 Z"/>
+</svg>

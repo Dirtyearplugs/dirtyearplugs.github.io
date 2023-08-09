@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>EO Maps</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/icon/testing.ico') }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>
+
+
+
+  <!-- Favicon -->
+  <!-- <link href="img/icon/testing.ico" rel="icon"> -->
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <!-- Libraries Stylesheet 
+          <link href="lib/animate/animate.min.css" rel="stylesheet">
+          <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+            -->
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link type="text/css" href="stylesheets/style.css" rel="stylesheet">
+  <link type="text/css" href="stylesheets/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+  <!-- sqllite -->
+  <script src="
+https://cdn.jsdelivr.net/npm/sqlite@5.0.1/build/index.min.js
+"></script>
+</head>
+
+<body>
+  <div id="popup_background">
+    <div id="npc_inventory" class="npc_inv">
+      <div id="npc_title" class="npc_inv"></div>
+      <div id="npc_content" class="npc_inv"></div>
+      <div id="npc_cancel" class="npc_inv"></div>
+    </div>
+  </div>
+  <!--<div id="map" style="height:880px;"></div>-->
+  <div id="map" style="height:98vh;">
+
+  </div>
+  <style>
+    #Path0 {
+      fill: #e0e719
+    }
+
+    #Path1 {
+      opacity: 1;
+      fill: #e0e719
+    }
+
+    #Path2 {
+      fill: #6eabf1
+    }
+  </style>
+</body>
+<script type="text/javascript" src="Leaflet.js"></script>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript" src="Ravenwood.js"></script>
+
+
+
+
+</html>
