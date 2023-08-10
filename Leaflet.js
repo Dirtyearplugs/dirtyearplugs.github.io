@@ -63,7 +63,8 @@ function getDataByID(id) {
 
     xhr.send();
 }
-function getNpcByID(id) {
+function getNpcByID(resolve) {
+    let id = resolve.fill
     return new Promise(function (resolve, reject) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', './database.db', true);
@@ -74,10 +75,10 @@ function getNpcByID(id) {
         var db = new SQL.Database(uInt8Array);
 
         // Now you can run SQL queries on the db object.
-        let query_string = "SELECT * FROM eoitems"
-        let addition = " WHERE \"ID\" = " + parseInt(id)
+        let query_string = "SELECT * FROM npc"
+        let addition = " WHERE \"fill\" = " + parseInt(id)
         let query = query_string + addition
-        data = db.exec(query);
+        let data = db.exec(query);
         resolve(data)
         // console.log(data);
     };
@@ -273,7 +274,9 @@ function loadCommons() {
                 //then
                 // open_shop_info(open_shop_npc(target.replace("#", "")))
                 open_shop_npc(target.replace("#", "")).then(function (resolve) {
-                    return open_shop_info(resolve);
+                    open_shop_info(resolve)
+                    getNpcByID(resolve).then(function (resolve) {
+                    })
                 })
             }
             else if (stroke == "#1ecbe1") {
