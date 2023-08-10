@@ -7,7 +7,12 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
-  
+
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+
   <!-- sqllite -->
   <script src="https://cdn.jsdelivr.net/npm/sqlite@5.0.1/build/index.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/0.3.2/js/sql.js"></script>
@@ -18,6 +23,8 @@
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
   <script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>
+
+
 
   <!-- Favicon -->
   <!-- <link href="img/icon/testing.ico" rel="icon"> -->
@@ -53,7 +60,14 @@
   <div id="popup_background">
     <div id="npc_inventory" class="npc_inv">
       <div id="npc_title" class="npc_inv"></div>
-      <div id="npc_content" class="npc_inv"></div>
+      <div id="npc_content" class="npc_inv" style="display: flex; flex-direction: column">
+        <div id="buy" style="display: flex;margin: 15px;background-color: #9b9292;border-radius: 5px;padding: 0px 15px;">
+          <h3 style="pointer-events:none">Buy items</h3>
+        </div>
+        <div id="sell" style="display: flex;margin: 15px;background-color: #9b9292;border-radius: 5px;padding: 0px 15px;">
+          <h3 style="pointer-events:none">Sell items</h3>
+        </div>
+      </div>
       <div id="npc_cancel" class="npc_inv"></div>
     </div>
   </div>
@@ -79,6 +93,7 @@
 <script type="text/javascript" src="Leaflet.js"></script>
 <script type="text/javascript" src="jQuery.js"></script>
 <script type="text/javascript" src="Ravenwood.js"></script>
+<script type="text/javascript" src="shop_npc.js"></script>
 
 
 

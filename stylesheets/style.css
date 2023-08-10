@@ -1,7 +1,6 @@
 /********** Template CSS **********/
-
 body {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: black;
 }
 
@@ -24,6 +23,7 @@ body {
 }
 
 #npc_inventory {
+    padding: 10px;
     display: flex;
     width: 60%;
     height: 80%;
@@ -40,7 +40,10 @@ body {
     height: 10%;
     margin: 3% auto;
     border-radius: 5px;
-    background-color: #5b5656
+    background-color: #5b5656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #npc_content {
