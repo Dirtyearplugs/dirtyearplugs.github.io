@@ -55,7 +55,7 @@ function getDataByID(id) {
 
         // Now you can run SQL queries on the db object.
         let query_string = "SELECT * FROM eoitems"
-        let addition = " WHERE \"ID\" = " + int(id)
+        let addition = " WHERE \"ID\" = " + parseInt(id)
         let query = query_string + addition
         data = db.exec(query);
         // console.log(data);
