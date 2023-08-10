@@ -63,6 +63,28 @@ function getDataByID(id) {
 
     xhr.send();
 }
+function getNpcByID(id) {
+    return new Promise(function (resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', './database.db', true);
+    xhr.responseType = 'arraybuffer';
+
+    xhr.onload = function (e) {
+        var uInt8Array = new Uint8Array(this.response);
+        var db = new SQL.Database(uInt8Array);
+
+        // Now you can run SQL queries on the db object.
+        let query_string = "SELECT * FROM eoitems"
+        let addition = " WHERE \"ID\" = " + parseInt(id)
+        let query = query_string + addition
+        data = db.exec(query);
+        resolve(data)
+        // console.log(data);
+    };
+
+    xhr.send();
+})
+}
 
 
 
