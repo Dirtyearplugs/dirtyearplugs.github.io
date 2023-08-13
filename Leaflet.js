@@ -95,10 +95,13 @@ $(document).ready(function () {
 
         }
         else if (e.originalEvent.srcElement.id == "sell"){
-            $("#npc_content").empty()
+            $("#npc_content").empty().append("<div id='back' style='display: flex;margin: 15px;background-color: #9b9292;border-radius: 5px;padding: 0px 15px;'><h3 style='pointer-events:none'>Back</h3></div>")
         }
         else if (e.originalEvent.srcElement.id == "buy"){
-            $("#npc_content").empty()
+            $("#npc_content").empty().append("<div id='back' style='display: flex;margin: 15px;background-color: #9b9292;border-radius: 5px;padding: 0px 15px;'><h3 style='pointer-events:none'>Back</h3></div>")
+        }
+        else if (e.originalEvent.srcElement.id == "back"){
+            $("#npc_content").empty().append("<div id='buy' style='display: flex;margin: 15px;background-color: #9b9292;border-radius: 5px;padding: 0px 15px;'><h3 style='pointer-events:none'>Buy items</h3></div><div id='sell' style='display: flex;margin: 15px;background-color: #9b9292;border-radius: 5px;padding: 0px 15px;'><h3 style='pointer-events:none'>Sell Items</h3></div>")
         }
         else {
             $('#popup_background').css('display', 'none');
@@ -276,6 +279,7 @@ function loadCommons() {
                 open_shop_npc(target.replace("#", "")).then(function (resolve) {
                     open_shop_info(resolve)
                     getNpcByID(resolve).then(function (resolve) {
+                        console.log("database retreival", resolve)
                     })
                 })
             }
@@ -338,29 +342,29 @@ function loadCommons() {
         },
         {
             "name": "Packer Piper",
-            "fill": "00000009",
+            "fill": "00000007",
             "center": [10.8203125, 32.80071748135317]
         },
         {
             "name": "Creative Caroline",
-            "fill": "00000010",
+            "fill": "00000009",
             "center": [39.984375, 31.46260744952317]
         }
     ]
     var aeven_quest_npcs = [
         {
             "name": "Goat Collector",
-            "fill": "00000011",
+            "fill": "00000010",
             "center": [45.12890625, 35.030946549197836]
         },
         {
             "name": "Foreman",
-            "fill": "00000012",
+            "fill": "00000011",
             "center": [25.09765625, 31.45640016028825]
         },
         {
             "name": "Shady Doorkeeper",
-            "fill": "00000013",
+            "fill": "00000012",
             "center": [27.81640625, 39.40919312354095]
         },
 
